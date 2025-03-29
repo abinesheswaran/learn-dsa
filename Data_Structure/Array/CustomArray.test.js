@@ -71,7 +71,9 @@ describe('CustomArray', () => {
   });
 
   test('should throw error when unshifting beyond size', () => {
-    expect(() => arr.unshift([1, 2, 3, 4, 5, 6])).toThrow('Array out of bound Error!');
+    expect(() => arr.unshift([1, 2, 3, 4, 5, 6])).toThrow(
+      'Array out of bound Error!'
+    );
   });
 
   test('should find elements correctly', () => {
@@ -120,7 +122,7 @@ describe('CustomArray', () => {
       arr.push(10);
       arr.push(20);
       arr.push(30);
-      arr.splice(1, 1, []); 
+      arr.splice(1, 1, []);
       expect(arr.length()).toBe(2);
       expect(arr.find(0)).toBe(10);
       expect(arr.find(1)).toBe(30);

@@ -20,23 +20,23 @@ describe('BinaryTree - BFS Function', () => {
     expect(bfs(tree, 7)).toBe(true);
   });
 
-    test('should return false if value is not found in BFS', () => {
-      expect(bfs(tree,1)).toBe(false);
-      expect(bfs(tree,20)).toBe(false);
-    });
+  test('should return false if value is not found in BFS', () => {
+    expect(bfs(tree, 1)).toBe(false);
+    expect(bfs(tree, 20)).toBe(false);
+  });
 
-    test('should traverse in BFS order', () => {
-      const visited = [];
-      function bfsOrder() {
-        const arr = [tree.head];
-        for (let i = 0; i < arr.length; i++) {
-          const node = arr[i];
-          visited.push(node.value);
-          if (node.left) arr.push(node.left);
-          if (node.right) arr.push(node.right);
-        }
+  test('should traverse in BFS order', () => {
+    const visited = [];
+    function bfsOrder() {
+      const arr = [tree.head];
+      for (let i = 0; i < arr.length; i++) {
+        const node = arr[i];
+        visited.push(node.value);
+        if (node.left) arr.push(node.left);
+        if (node.right) arr.push(node.right);
       }
-      bfsOrder();
-      expect(visited).toEqual([5, 3, 15, 7, 18, 12]); // Expected BFS order
-    });
+    }
+    bfsOrder();
+    expect(visited).toEqual([5, 3, 15, 7, 18, 12]); // Expected BFS order
+  });
 });

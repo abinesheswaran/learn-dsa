@@ -15,4 +15,3 @@ const binarySearch = (array, value) => {
 };
 
 module.exports = binarySearch;
-

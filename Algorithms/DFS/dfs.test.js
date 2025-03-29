@@ -114,5 +114,4 @@ describe('Binary Tree Operations', () => {
     expect(inorder(rightHeavyTree)).toEqual([10, 15, 20, 25]);
     expect(postorder(rightHeavyTree)).toEqual([25, 20, 15, 10]);
   });
-
 });
